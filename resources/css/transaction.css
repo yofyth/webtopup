@@ -1,0 +1,70 @@
+.tx-wrap { max-width: 640px; margin: 40px auto 80px; }
+
+.tx-card {
+    background: #fff;
+    border: 1px solid #ece9f7;
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.tx-status {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px dashed #ece9f7;
+}
+
+.tx-status__icon {
+    width: 64px; height: 64px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px; font-size: 28px;
+}
+
+.tx-status--pending .tx-status__icon { background: #fef3c7; color: #92400e; }
+.tx-status--success .tx-status__icon { background: #dcfce7; color: #15803d; }
+.tx-status--failed .tx-status__icon,
+.tx-status--expired .tx-status__icon { background: #fee2e2; color: #b91c1c; }
+
+.tx-status h2 { font-size: 18px; font-weight: 800; color: #1b1533; margin: 0 0 6px; }
+.tx-status p { font-size: 13px; color: #8a85a3; margin: 0; }
+
+.tx-row { display: flex; justify-content: space-between; font-size: 13px; padding: 8px 0; color: #5b566f; }
+.tx-row span:last-child { color: #1b1533; font-weight: 600; text-align: right; }
+
+.tx-qr { text-align: center; margin: 18px 0; }
+.tx-qr img { width: 200px; height: 200px; border: 1px solid #ece9f7; border-radius: 12px; }
+
+.tx-paycode {
+    background: #f7f6fc;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    margin: 18px 0;
+}
+.tx-paycode strong { font-size: 22px; letter-spacing: 2px; color: #1b1533; display: block; margin-top: 6px; }
+
+.tx-note {
+    background: #fef9c3;
+    border: 1px solid #fde68a;
+    color: #713f12;
+    font-size: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+.tx-lookup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 480px) {
+    .tx-wrap { margin: 24px auto 48px; padding: 0 14px; }
+    .tx-card { padding: 20px; }
+    .tx-qr img { width: 160px; height: 160px; }
+    .tx-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+    .tx-row span:last-child { text-align: left; }
+}
